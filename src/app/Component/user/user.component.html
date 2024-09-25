@@ -1,0 +1,68 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h3>Manage Employees</h3>
+    </div>
+    <div class="card-body">
+      <!-- User Form -->
+      <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="name">Name</label>
+            <input id="name" formControlName="name" type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="email">Email</label>
+            <input id="email" formControlName="email" type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="address">Address</label>
+            <input id="address" formControlName="address" type="text" class="form-control" placeholder="Address">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="phone">Phone</label>
+            <input id="phone" formControlName="phone" type="text" class="form-control" placeholder="Phone">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="userForm.invalid">
+          {{ isEditMode ? 'Update Employee' : 'Add Employee' }}
+        </button>
+        <button type="button" class="btn btn-secondary ml-2" (click)="clearForm()">Clear</button>
+
+        <button class="btn btn-primary mb-3" (click)="exportToPDF()">Export to PDF</button>
+        <button class="btn btn-secondary mb-3" (click)="exportToExcel()">Export to Excel</button>
+      </form>
+
+      <!-- User Table -->
+      <table class="table table-bordered table-striped mt-4">
+        <thead class="thead-dark">
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td><input type="checkbox"></td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.phone }}</td>
+            <td>
+              <button class="btn btn-warning btn-sm" (click)="editUser(user)">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

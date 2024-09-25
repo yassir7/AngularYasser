@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page d'Accueil Dynamique</title>
+    
+</head>
+<body>
+    <!-- <header>
+        <h1 class="fade-in">Bienvenue sur Ma Page d'Accueil</h1>
+    </header> -->
+  
+    <section class="hero">
+      <img src="https://i0.wp.com/www.easyserviceinformatique.com/wp-content/uploads/2024/07/EASY_SERVICE_INFORMATIQUE-2000-38-1.jpg?w=800&ssl=1" alt="Image représentant notre monde" class="hero-image">
+      <div class="hero-overlay"></div>
+      <div class="hero-content fade-in">
+          <h2>Découvrez Notre Monde</h2>
+          <p>Une expérience unique vous attend</p>
+      </div>
+      <div class="scroll-down"></div>
+  </section>
+    <main>
+        <h2>Nos Services</h2>
+        <div class="grid">
+            <div class="card fade-in">
+                <img src="https://media.istockphoto.com/id/1399550888/fr/photo/homme-daffaires-tapant-sur-un-clavier-dordinateur-concept-denqu%C3%AAte-de-satisfaction-du.jpg?s=1024x1024&w=is&k=20&c=eZooEmXrTRgmpjYG_0WOXMF6f5OLsWpZqbR_SZ9jOgY=" alt="Service 1">
+                <div class="card-content">
+                    <h3>Service 1</h3>
+                    <p>Le service client est encore considéré comme un poste de dépenses alors qu’il est un véritable créateur de richesse et de valeur. Quand on voit l’importance que prend la relation client dans la réussite ou l’échec d’une entreprise, 
+                      il serait dangereux de ne pas repenser la vision du service client.</p>
+                </div>
+            </div>
+            <div class="card fade-in">
+                <img src="https://img.freepik.com/photos-premium/concept-service-montrant-homme-entreprise_220873-7827.jpg" alt="Service 2">
+                <div class="card-content">
+                    <h3> Cyberdéfense</h3>
+                    <p>
+                      La protection de votre réseau, vos données et vos 
+                      ordinateurs et répondre aux exigences de la norme RGPD.​</p>
+                </div>
+            </div>
+            <div class="card fade-in">
+                <img src="data:image/jpeg;base64,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" alt="Service 3">
+                <div class="card-content">
+                    <h3>Télécoms 3</h3>
+                    <p>
+                      L'amélioration de la communication entre vos collaborateurs avec 
+                      des solutions de communication unifiées pour votre entreprise</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="contact" class="contact">
+      <h2>Contactez-nous</h2>
+      <form class="contact-form">
+          <div class="form-group">
+              <label for="name">Nom :</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="subject">Sujet :</label>
+              <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+              <label for="message">Message :</label>
+              <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Envoyer</button>
+      </form>
+  </section>
+    <footer>
+        <p>&copy; 2024 Ma Page d'Accueil Dynamique. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

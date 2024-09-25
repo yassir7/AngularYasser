@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #000; /* Couleur de fond noire */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #f8f9fa;
+    margin-right: 15px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  .nav-link.active {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
